@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ticket">
+<head>
+  <base href="">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Prueba</title>
+  <style>
+    * {
+      margin: 0;
+    }
+    html, body {
+      height: 100%;
+    }
+    .wrapper {
+      min-height: 100%;
+      height: auto !important;
+      height: 100%;
+      margin: 0 auto -155px; /* the bottom margin is the negative value of the footer's height */
+    }
+    .footer, .push {
+      height: 155px; /* .push must be the same height as .footer */
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <!-- <a class="navbar-brand" href="#">Flisol</a> -->
+      <a class="navbar-brand" href="#"><img src="js/img/flisol.png" style="width:50%" /></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="#!/ticket/agregar">Agregar</a></li>
+        <li><a href="#!/ticket/listar">Listar</a></li>
+
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+  <div class="wrapper">
+    <ng-view></ng-view>
+    <div class="push"></div>
+  </div>
+  <div class="footer">
+      <footer>Flisol 2017</div>
+  </div>
+
+
+  <link rel="stylesheet" href="js/bower_components/bootstrap/dist/css/bootstrap.css" type="text/css" />
+
+  <script type="text/javascript" src="js/bower_components/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="js/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/bower_components/angular/angular.min.js"></script>
+  <script type="text/javascript" src="js/bower_components/angular-route/angular-route.min.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+
+
+
+
+</body>
+</html>

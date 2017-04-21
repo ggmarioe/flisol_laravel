@@ -1,0 +1,32 @@
+<div class="container">
+  <h1>Formulario ingreso ticket</h1>
+    <div ng-if="mensaje">
+      {{ mensaje }}
+    </div>
+    <div ng-if="error.length >1 ">
+      {{ mensajeError }}
+    </div>
+
+    <form class="form">
+          <div class="form-group">
+            <label class="">Nombre usuario</label>
+            <input type="text" class="form-control" placeholder="Nombre de usuario" ng-model="data.nombre" required>
+          </div>
+
+          <div class="form-group">
+            <label class="">Correo electronico </label>
+            <input type="text" class="form-control" placeholder="correo electronico" ng-model="data.correo" required>
+          </div>
+
+          <div class="form-group">
+            <label class="">Ingrese su solicitud</label><br>
+            <textarea name="detalle" class="form-control" rows="8" cols="80" ng-model="data.solicitud"></textarea>
+          </div>
+
+
+          <button type="button" class="button button-block button-positive" ng-disabled="loginForm.$invalid" ng-click="guardar()" >Guardar</button>
+
+
+
+    </form>
+</div>

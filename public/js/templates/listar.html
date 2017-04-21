@@ -1,0 +1,26 @@
+<div class="container" ng-controller="TicketCtrl">
+
+    <h1>listado de Ticket</h1>
+    <table class="table">
+      <tr>
+        <th>Nombre</th>
+        <th>Correo</th>
+        <th>Solicitud</th>
+        <th>Estado</th>
+        <th>acciones</th>
+      </tr>
+      <tr ng-repeat="t in tickets">
+        <td>{{ t.nombre_usuario }}</td>
+        <td>{{ t.correo_usuario }}</td>
+        <td>{{ t.solicitud }}</td>
+        <td>{{ t.estado }}</td>
+        <td>{{ t.estado }}</td>
+        <td>
+          <a href="#!/ticket/listarporid/{{t.id }}" >Ver Ticket</a>
+
+        </td>
+      </tr>
+    </table>
+
+
+</div>
